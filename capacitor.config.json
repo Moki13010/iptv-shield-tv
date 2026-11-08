@@ -1,6 +1,6 @@
+
 {
   "appId": "com.iptv.ha.player",
-  "appName": "IPTV Player HA",
-  "webDir": ".",
-  "bundledWebRuntime": false
+  "appName": "IPTV Shield TV",
+  "webDir": "www"
 }
