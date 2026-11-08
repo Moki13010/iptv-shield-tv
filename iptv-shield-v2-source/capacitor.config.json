@@ -1,0 +1,6 @@
+{
+  "appId": "com.iptv.ha.player",
+  "appName": "IPTV Player HA",
+  "webDir": ".",
+  "bundledWebRuntime": false
+}
