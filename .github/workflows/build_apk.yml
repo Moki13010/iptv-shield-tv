@@ -3,7 +3,8 @@ name: Build Nvidia Shield TV APK
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -11,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node
@@ -32,13 +33,14 @@ jobs:
         run: |
           mkdir -p www
           cp index.html www/index.html
+          test -f www/index.html
 
-      - name: Prepare Android
+      - name: Create Android project
         run: |
           npx cap add android
           npx cap sync android
 
-      - name: Build APK
+      - name: Build Android APK
         run: |
           cd android
           chmod +x gradlew
